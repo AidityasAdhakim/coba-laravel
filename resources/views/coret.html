@@ -1,0 +1,41 @@
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam laudantium ipsam perferendis, earum deleniti dolorum, corporis sint vel esse in explicabo iure laboriosam fugiat architecto laborum repudiandae quam voluptatibus amet debitis molestias quo. Eos ratione dolor natus reprehenderit quas architecto hic modi aliquid, placeat reiciendis culpa velit est! Maiores nihil minima incidunt qui perferendis quisquam illum dicta nesciunt harum aut! Doloremque impedit beatae temporibus distinctio earum, veritatis atque laboriosam fuga sunt laborum placeat dolorem odio nisi deserunt vero, nobis officiis eveniet unde, accusantium labore. Voluptatibus eum ea, est asperiores nulla corporis! In pariatur non sint nemo sequi, fugit mollitia.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit doloribus illum sunt totam reprehenderit ipsum dignissimos saepe aut eveniet non? Doloribus eligendi repellendus similique tenetur nemo quis explicabo autem illum totam mollitia esse culpa id qui eveniet repellat distinctio earum saepe maiores, quam laudantium libero ex dolore sequi? Delectus, necessitatibus.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, temporibus magnam. Inventore veritatis repellendus, perspiciatis facere minima suscipit praesentium temporibus eaque quod, autem aliquam nostrum expedita. Quam neque quod itaque et aliquid velit dicta atque odio, saepe corrupti. Nisi nam accusantium numquam ducimus commodi placeat porro obcaecati facilis magnam beatae qui, possimus enim aliquam aspernatur illum veritatis magni cumque voluptates sit. Repellendus qui sint ullam labore accusantium dignissimos commodi reiciendis?</p>
+
+Post::create([
+    'title' => 'Fourth Post',
+    'category_id' => 2,
+    'slug' => 'fourth-post',
+    'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam laudantium ipsam perferendis, earum deleniti dolorum, corporis sint vel esse in explicabo iure laboriosam fugiat architecto laborum repudiandae quam voluptatibus amet debitis molestias quo. Eos ratione dolor natus reprehenderit quas architecto hic modi aliquid, placeat reiciendis culpa vel',
+    'body'=>'<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam laudantium ipsam perferendis, earum deleniti dolorum, corporis sint vel esse in explicabo iure laboriosam fugiat architecto laborum repudiandae quam voluptatibus amet debitis molestias quo. Eos ratione dolor natus reprehenderit quas architecto hic modi aliquid, placeat reiciendis culpa velit est! Maiores nihil minima incidunt qui perferendis quisquam illum dicta nesciunt harum aut! Doloremque impedit beatae temporibus distinctio earum, veritatis atque laboriosam fuga sunt laborum placeat dolorem odio nisi deserunt vero, nobis officiis eveniet unde, accusantium labore. Voluptatibus eum ea, est asperiores nulla corporis! In pariatur non sint nemo sequi, fugit mollitia.</p>'
+])
+
+User::create([
+            'name' => 'Aidityas',
+            'username' => 'Aidityas',
+            'email' => 'aidityas@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('123'),
+            'remember_token' => Str::random(10)
+        ]);
+
+        // Category::create([
+        //     'name' => 'Programming',
+        //     'slug' => 'programming'
+        // ]);
+
+        // Category::create([
+        //     'name' => 'Food',
+        //     'slug' => 'food'
+        // ]);
+
+        // Category::create([
+        //     'name' => 'Personal',
+        //     'slug' => 'personal'
+        // ]);
+
+        // Post::create([
+        //     'title' => 'First Post',
+        //     'slug' => 'first-post',
+        //     'category_id' => 1,
+        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        //     'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis aliquam laudantium ipsam perferendis, earum deleniti dolorum, corporis sint vel esse in explicabo iure laboriosam fugiat architecto laborum repudiandae quam voluptatibus amet debitis molestias quo. Eos ratione dolor natus reprehenderit quas architecto hic modi aliquid, placeat reiciendis culpa velit est! Maiores nihil minima incidunt qui perferendis quisquam illum dicta nesciunt harum aut! Doloremque impedit beatae temporibus distinctio earum, veritatis atque laboriosam fuga sunt laborum placeat dolorem odio nisi deserunt vero, nobis officiis eveniet unde, accusantium labore. Voluptatibus eum ea, est asperiores nulla corporis! In pariatur non sint nemo sequi, fugit mollitia.</p>'
+        // ]);
