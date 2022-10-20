@@ -7,6 +7,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\DashboardPostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +26,7 @@ Route::get('/', [HomeController::class,'index']);
 Route::get('/about', function () {
     return view('about',[
         "title" => "About",
+        "active" => "Home",
         "name" => "Aidityas Adhakim",
         "email" => "aidityasadhakim250@gmail.com",
         "image" => "img1.jpg"
@@ -30,7 +34,7 @@ Route::get('/about', function () {
 });
 
 
-Route::get('/blog', [PostController::class,'index'])->middleware('auth');
+Route::get('/blog', [PostController::class,'index']);
 
 Route::get('/blog/{post:slug}', [PostController::class, 'show']);
 
@@ -49,3 +53,14 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 Route::post('/logout',[LoginController::class,'logout']);
+Route::get('/dashboard',function(){
+    return view('dashboard.index',[
+        "title" => "Dashboard"
+    ]);
+})->middleware('auth');
+
+Route::get('dashboard/posts/checkSlug',[DashboardPostController::class],'checkSlug');
+Route::resource('/dashboard/posts',DashboardPostController::class);
+
+
+Route::resource('/dashboard/categories', AdminCategoryController::class)->middleware('admin');
